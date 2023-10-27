@@ -1,0 +1,99 @@
+  
+
+
+//  task - delete cart
+
+{/*
+
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+
+const App = () => {
+  
+                               // TASK : perform CRUD operation, "20" CARDS ONLY 
+
+
+  const [userData, setUserData] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Fetch data from the API using Axios
+    axios.get('https://dummyjson.com/products')
+      .then((response) => {
+        if (Array.isArray(response.data.products)) {
+          // Handle array response
+          setUserData(response.data.products); // Display 
+        } else if (typeof response.data === 'object') {
+          // Handle object response
+          const userDataArray = Object.values(response.data.products);
+          setUserData(userDataArray); // Display 
+        } else {
+          console.error('API response is not an array or object:', response.data);
+        }
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
+
+
+// Delete operation
+const handleDeleteProduct = (userId) => {
+  axios
+    .delete(`https://dummyjson.com/products/${userId}`)
+    .then(() => {
+      // Product was successfully deleted
+      // Update the products state to reflect the deletion
+      setUserData((prevProducts) => prevProducts.filter((user) => user.id !== userId));  // confusing line 
+    })
+    .catch((error) => {
+      setError('Error deleting product');
+      console.error('Error deleting product:', error);
+    });
+};
+
+ return (
+    <div >
+      <header className='text-3xl font-bold text-center my-4 text-orange-400  sm:my-10'>Apponward , Noida</header>
+      <p className='font-serif text-2xl text-center'>Task for React Developer</p>
+
+     {userData.slice(0,20).map((user )=>(
+      <div key={user.id}>
+
+         
+
+         <section className="text-gray-600 border-4 m-5 border-gray-600 rounded-2xl items-center body-font">
+              <div className="container px-5 py-24 sm:py-14 mx-auto">
+                <div className="flex flex-wrap -m-4">
+                  <div className=" p-4 w-full">
+                    <a className="block relative h-48 sm:h-64 rounded overflow-hidden">
+                      <img alt="loading" className="overflow-hidden w-full rounded-xl h-full block" src={user.thumbnail} />
+                    </a>
+                    <div className="mt-4">
+                      <h3 className="text-gray-500 text-2xl font-bold ">{user.description}</h3> 
+                      <br /> <p className="mt-1">Modal : {user.title}</p>
+                      <h2 className="text-gray-900 title-font text-lg font-medium"> <br />
+                      <button className='py-3 bg-lime-500 hover:bg-red-600 px-3 rounded-2xl ' onClick={() => handleDeleteProduct(user.id)}>Delete</button>
+                      </h2>
+                    
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </div>
+            </section>
+      </div>
+     )
+     )}
+
+
+
+    </div>
+  )
+}
+
+export default App
+
+*/}
